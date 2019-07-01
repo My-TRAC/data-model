@@ -1,8 +1,6 @@
 package MySQLHandlers;
 
-import org.apache.avro.Schema;
-
-import java.lang.reflect.Field;
+import Objects.Schema;
 
 public class SQLQueryBuilder {
 
@@ -21,7 +19,7 @@ public class SQLQueryBuilder {
             sb.append(sql_sentence);
             first=false;
         }
-        sb.append(");");
+        sb.append(")");
 
 
 
@@ -29,78 +27,21 @@ public class SQLQueryBuilder {
     }
 
     private static String buildFieldDescriptor(Schema.Field field) {
-        String fieldName = field.name();
-        Schema fieldSchema = field.schema();
-        boolean isPK  = fieldName.equals("mytrac_id");
-        boolean isNullable = fieldSchema.isNullable();
-        
-        String mysqlType = fieldSchema.getProp("cigo.mysql.datatype");
-        if(mysqlType == null)
-        {
-            boolean isLogicalType = fieldSchema.getLogicalType() != null;
-            if( isLogicalType && fieldSchema.getLogicalType().getName().equals("timestamp-millis"))
-            {
-               mysqlType = "TIMESTAMP";
-            } else if(isLogicalType && fieldSchema.getLogicalType().getName().equals("time-millis"))
-            {
-                mysqlType = "TIME";
-            }
-            else
-            {
-                mysqlType = convertToMysqlType(field);
-            }
-        }
+        String field_name = field.getName();
+        if(field_name.equals("id")) return "id serial NOT NULL PRIMARY KEY";
+        String type = field.getType();
 
-        String query =  fieldName+" "+mysqlType;
-        if(isPK) {
-            query = query + " PRIMARY KEY";
-        }
-        
-        if(!isNullable) {
-            query = query + " NOT NULL";
-        }
-        else
-        {
-            query = query + " NULL";
-        }
-        
-        if(!fieldSchema.isNullable() && mysqlType.contains("TIME"))
-        {
-            if(fieldName.equals("mytrac_last_modified"))
-            {
-                query = query + " DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP";
-            }
-            else
-            {
-                query = query + " DEFAULT CURRENT_TIMESTAMP";
-            }
-        }
+        String mysqlType = convertToMysqlType(type);
+
+        String query =  field_name+" "+mysqlType;
 
         return query;
     }
-    
-    private static String convertToMysqlType(Schema.Field field) {
-        Schema schema = field.schema();
-        String type = null;
-        if(!schema.isNullable())
-        {
-            type = schema.getType().getName().toLowerCase();
-        }
-        else
-        {
-            for( Schema t : schema.getTypes())
-            {
-                String next = t.getType().getName().toLowerCase();
-                if(next != null)
-                {
-                    type = next;
-                }
-            }
-        }
-        
-        switch (type) {
+
+    private static String convertToMysqlType(String type) {
+        switch (type.toLowerCase()) {
             case "int":
-                return "INT";
+                return "INTEGER";
             case "float":
                 return "FLOAT";
             case "long":
@@ -109,8 +50,6 @@ public class SQLQueryBuilder {
                 return "DOUBLE";
             case "boolean":
                 return "BIT(1)";
-            case "string":
-                return "TINYTEXT";
             default:
                 System.out.println("[ERROR] It doesn't exist a mapping type for "+type);
         }
