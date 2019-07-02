@@ -23,14 +23,14 @@ public class SQLConnection {
 
         while(connection == null) {
             try {
-                String url = "jdbc:mysql://"+ip+"/"+database+","+user+","+pw;
+                String url = "jdbc:mysql://"+ip+"/"+database;
                 connection = DriverManager
-                        .getConnection("jdbc:mysql://"+ip+"/"+database,user, pw);
+                        .getConnection(url,user, pw);
 
             } catch (SQLException e) {
 
                 System.out.println("Connection Failed! Check output console");
-                System.out.println("IP: "+ip+", database: "+database+", user: "+user+", pw: "+pw);
+                System.out.println("URL: "+ip+", database: "+database+", user: "+user+", pw: "+pw);
 
                 e.printStackTrace();
                 Thread.sleep(1000);
