@@ -50,7 +50,6 @@ public class MYSQLInitDataModel {
         @Parameter(names={"-tn","--topic-names"}, description="Topic names", required= true)
         public List<String> topicNames= new ArrayList<>();
         
-        
         @Parameter(names = {"-h","--help"}, help = true)
         private boolean help;
         
@@ -101,8 +100,8 @@ public class MYSQLInitDataModel {
             jct.usage();
             return;
         }
-        
-        
+
+       
         Map<String, Schema> schemas = loadSchemasMap(arguments.schemaRegistryURL);
         
         //It handles the uploaded file
