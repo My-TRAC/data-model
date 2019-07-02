@@ -3,17 +3,18 @@
 
 ## Data Types
 
-| Type name | Description | MY-SQL type |
+| Type name | Description | MY-SQL type (Minimum version 5.7) |
 | --------- | ----------- | ----------- |
-| boolean | A boolean | TINYINT |
+| boolean | A boolean | BIT(1) |
 | int | 32-bit integer | INT |
 | long | 64-bit integer | BIGINT |
 | float | 32-bit floating point number | FLOAT |
-| string | variable length string | VARCHAR |
+| string | variable length string | TINYTEXT |
 | timestamp | string with format YYYY-MM-DD hh:mm:ss | TIMESTAMP |
 | time | string with format "hh:mm:ss" | TIME | 
 | date | int with the form YYYYMMDD. Example 20180130 | INT | 
 | enum | int representing an enumeration. Example 0 for bus, 1 for railway, etc. | INT |
+| json | string representing a JSON | JSON |
 
 __For those conditionally required fields, please look at the official GTFS specification: https://gtfs.org/reference/static/__
 
@@ -329,6 +330,32 @@ user_marital_status enum can have the following values:
 
 ** User working hours need to be clarified **
 ** User traveller type enum need to be defined **
+
+### user_choices_route
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | MyTrac-Companion  |
+| mytrac_is_valid | boolean | yes | MyTrac-Companion  |
+| mytrac_last_modified | timestamp | yes | MyTrac-Companion  |
+| user_id | string | yes | MyTrac-Companion |
+| group_id| string | no | MyTrac-Companion |
+| from_name | string | yes | MyTrac-Companion |
+| from_address | string | yes | MyTrac-Companion |
+| from_lon | float | yes | MyTrac-Companion |
+| from_lat | float | yes | MyTrac-Companion |
+| to_name | string | yes | MyTrac-Companion |
+| to_lon | float | yes | MyTrac-Companion |
+| to_lat | float | yes | MyTrac-Companion |
+| to_address | string | yes | MyTrac-Companion |
+| time | timestamp | yes | MyTrac-Companion | 
+| mode | string | no |  MyTrac-Companion |
+| max_walk_distance | int | no |  MyTrac-Companion |
+| num_itineraries | int | no | MyTrac-Companion |
+| max_transfers | int | no | MyTrac-Companion |
+| request_reply | json | yes | MyTrac-Companion |
+
+
 
 
 
