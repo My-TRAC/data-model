@@ -213,12 +213,47 @@ poi_type enum can have the following values:
 | mytrac_is_valid | boolean | yes | My-Trac Companion |
 | mytrac_last_modified | timestamp | yes | My-Trac Companion |
 | choice_id | string | yes | My-Trac Companion |
-| tod_earlier | float | yes | Time of Departure Model |
-| tod_ontime | float | yes | Time of Departure Model |
-| tod_later | float | yes | Time of Departure Model |
+| trip_dur_car | int | yes | My-Trac Companion |                            
+| trip_dur_pt | int | yes | My-Trac Companion |                                     
+| trip_dur_moto | int | yes | My-Trac Companion |                       
+| trip_dur_bike | int | yes | My-Trac Companion |
+| trip_comfort_car | int | yes | My-Trac Companion |                        
+| trip_comfort_pt | int | yes | My-Trac Companion |                         
+| trip_comfort_moto | int | yes | My-Trac Companion |               
+| trip_comfort_bike | int | yes | My-Trac Companion |            
+| trip_cost_car | float | yes | My-Trac Companion |                          
+| trip_cost_moto | float | yes | My-Trac Companion |                        
+| trip_cost_bike | float | yes | My-Trac Companion | 
+| trip_cost_pt | float | yes | My-Trac Companion |
 | mod_car | float | yes | Mode Choice Model |
 | mod_pt | float | yes | Mode Choice Model |
 | mod_motbike | float | yes | Mode Choice Model |
+
+
+### route_departure_model_output
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | My-Trac Companion |
+| mytrac_is_valid | boolean | yes | My-Trac Companion |
+| mytrac_last_modified | timestamp | yes | My-Trac Companion |
+| choice_id | string | yes | My-Trac Companion |
+| trip_dur_earlier | float | yes | My-Trac Companion |       
+| trip_dur_later | float | yes | My-Trac Companion |                    
+| trip_dur_ontime | float | yes | My-Trac Companion |                       
+| trip_freq_earlier | int | yes | My-Trac Companion |                      
+| trip_freq_later | int | yes | My-Trac Companion |                         
+| trip_freq_ontime | int | yes | My-Trac Companion |                        
+| trip_discount_earlier | float | yes | My-Trac Companion |          
+| trip_discount_ontime | float | yes | My-Trac Companion |         
+| trip_discount_later | float | yes | My-Trac Companion |            
+| trip_walk_earlier | float | yes | My-Trac Companion |                      
+| trip_walk_later | float | yes | My-Trac Companion |                          
+| trip_walk_ontime | float | yes | My-Trac Companion |
+| tod_earlier | float | yes | Time of Departure Model |
+| tod_ontime | float | yes | Time of Departure Model |
+| tod_later | float | yes | Time of Departure Model |
+
 
 ### shape
 

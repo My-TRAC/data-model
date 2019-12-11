@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "route_choice_model_output",
+  "name": "route_departure_model_output",
   "fields": [
     {
       "name": "mytrac_id",
@@ -27,65 +27,67 @@
       "type": "string"
     },
     {
-      "name": "trip_dur_car",
-      "type": "int"
-    },
-    {
-      "name": "trip_dur_pt",
-      "type": "int"
-    },
-    {
-      "name": "trip_dur_moto",
-      "type": "int"
-    },
-    {
-      "name": "trip_dur_bike",
-      "type": "int"
-    },
-    {
-      "name": "trip_comfort_car",
-      "type": "int"
-    },
-    {
-      "name": "trip_comfort_pt",
-      "type": "int"
-    },
-    {
-      "name": "trip_comfort_moto",
-      "type": "int"
-    },
-    {
-      "name": "trip_comfort_bike",
-      "type": "int"
-    },
-    {
-      "name": "trip_cost_car",
+      "name": "trip_dur_earlier",
       "type": "float"
     },
     {
-      "name": "trip_cost_moto",
+      "name": "trip_dur_later",
       "type": "float"
     },
     {
-      "name": "trip_cost_bike",
+      "name": "trip_dur_ontime",
       "type": "float"
     },
     {
-      "name": "trip_cost_pt",
+      "name": "trip_freq_earlier",
+      "type": "int"
+    },
+    {
+      "name": "trip_freq_later",
+      "type": "int"
+    },
+    {
+      "name": "trip_freq_ontime",
+      "type": "int"
+    },
+    {
+      "name": "trip_discount_earlier",
       "type": "float"
     },
     {
-      "name": "mod_car",
+      "name": "trip_discount_ontime",
       "type": "float"
     },
     {
-      "name": "mod_pt",
+      "name": "trip_discount_later",
       "type": "float"
     },
     {
-      "name": "mod_motbike",
+      "name": "trip_walk_earlier",
       "type": "float"
-    }
+    },
+    {
+      "name": "trip_walk_later",
+      "type": "float"
+    },
+    {
+      "name": "trip_walk_ontime",
+      "type": "float"
+    },
+    {
+      "name": "tod_earlier",
+      "type": "float"
+    },
+    {
+      "name": "tod_ontime",
+      "type": "float"
+    },
+    {
+      "name": "tod_later",
+      "type": "float"
+    }    
   ],
-  "connect.name": "route_choice_model_output"
+  "connect.name": "route_departure_model_output"
 }
+
+
