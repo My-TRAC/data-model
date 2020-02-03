@@ -160,7 +160,6 @@ activity_type enum can have the following values:
 | trace_vert_acc | float | no | My-Trac Companion |
 
 
-
 ### poi
 
 | Field Name | Field Type | Required | Source |
@@ -185,6 +184,32 @@ poi_type enum can have the following values:
 * 6: hobby
 * 7: eating & drinking
 * 8: shopping
+
+
+### poll_questionary
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | My-TRAC |
+| mytrac_is_valid | boolean | yes | My-TRAC |
+| mytrac_last_modified | timestamp | yes | My-TRAC |
+| poll_id | long | yes | MyTrac-Companion |
+| questions | json | yes | MyTrac-Companion |
+| type | string | yes | MyTrac-Companion |
+| lang | string | yes | MyTrac-Companion |
+
+
+### poll_response
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | My-TRAC |
+| mytrac_is_valid | boolean | yes | My-TRAC |
+| mytrac_last_modified | timestamp | yes | My-TRAC |
+| user_id | string | yes | MyTrac-Companion |
+| poll_questionary_mytrac_id | long | yes | MyTrac-Companion |
+| responses | json | yes | MyTrac-Companion |
+
 
 ### route
 
