@@ -28,7 +28,10 @@
       },
       {
         "name": "questions",
-        "type": "json"
+        "type": { 
+          "type" : "string",
+          "cigo.mysql.datatype" : "JSON"
+        }
       },
       {
         "name": "type",

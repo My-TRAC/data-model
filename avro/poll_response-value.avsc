@@ -32,7 +32,10 @@
       },
       {
         "name": "responses",
-        "type": "json"
+        "type": { 
+          "type" : "string",
+          "cigo.mysql.datatype" : "JSON"
+        }
       }
     ],
     "connect.name": "poll_response"
