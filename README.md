@@ -39,6 +39,7 @@ These represent the different items in the My-Trac data model. There is a one-to
 | activity_start | timestamp | yes | crawled |
 | activity_end | timestamp | yes | crawled |
 | activity_timezone | string | yes | crawled |
+| activity_reputation | double | yes | MyTrac-Companion |
 
 
 activity_type enum can have the following values:
@@ -173,6 +174,7 @@ activity_type enum can have the following values:
 | poi_lat | double | yes | crawled |
 | poi_lon | double | yes | crawled |
 | poi_amenity | string | yes | crawled |
+| poi_reputation | double | yes | MyTrac-Companion |
 
 poi_type enum can have the following values:
 * 0: work/out-of-office
@@ -373,9 +375,10 @@ poi_type enum can have the following values:
 | user_id | string | yes | MyTrac-Companion |
 | user_registration_date | timestamp | yes | MyTrac-Companion |
 | user_birthday | date | yes | MyTrac-Companion |
+| user_impairment | enum | yes | MyTrac-Companion |
 | user_gender | enum | yes | MyTrac-Companion |
 | user_country | string | yes | MyTrac-Companion |
-| user_nationality | string | yes | MyTrac-Companion |
+| user_nationality | enum | yes | MyTrac-Companion |
 | user_occupation | enum | yes | MyTrac-Companion |
 | user_reliability | enum | yes | MyTrac-Companion |
 | user_imp_arr | enum | yes | MyTrac-Companion |
@@ -405,11 +408,26 @@ poi_type enum can have the following values:
 | user_often_car | enum | yes | MyTrac-Companion |
 | user_often_pt | enum | yes | MyTrac-Companion |
 | user_arrive_ontime | enum | yes | MyTrac-Companion |
+| user_lifestyle | enum | yes | MyTrac-Companion |
+| user_reputation | double | yes | MyTrac-Companion |
 
+
+user_impairment enum can have the following values:
+* 1: Visual impairment
+* 2: Other impairment
+* 3: No impairment
 
 user_gender enum can have the following values:
 * 0: male
 * 1: female
+* 2: other
+
+user_nationality enum can have the following values:
+* 1: Dutch
+* 2: Hellenic
+* 3: Portuguese
+* 4: Spanish
+* 5: Other
 
 user_occupation enum can have the following values:
 * 1:Private employee
@@ -467,6 +485,13 @@ user_arrive_ontime enum can have the following values:
 * 1: Not important at all 
 * 2: Somewhat important 
 * 3: Very important 
+
+user_lifestyle enum can have the following values:
+* 1: Active - outdoor, sports-oriented, adventurous
+* 2: Classy - elegant, luxurious, trendy
+* 3: Domesticated - family-based, homely
+* 4: Fun - pleasure seeking, sociable
+* 5: Other
 
 ** User working hours need to be clarified **
 

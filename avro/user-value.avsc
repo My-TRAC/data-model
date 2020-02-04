@@ -40,6 +40,10 @@
       "type": "int"
     },
     {
+      "name": "user_impairment",
+      "type": "int"
+    },
+    {
       "name": "user_gender",
       "type": "int"
     },
@@ -49,7 +53,7 @@
     },
     {
       "name": "user_nationality",
-      "type": "string"
+      "type": "int"
     },
     {
       "name": "user_occupation",
@@ -174,6 +178,10 @@
     },
     {
       "name": "user_arrive_ontime",
+      "type": "int"
+    },
+    {
+      "name": "user_lifestyle",
       "type": "int"
     },
     {
