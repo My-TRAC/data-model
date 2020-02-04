@@ -53,6 +53,10 @@
         "string"
       ],
       "default": null
+    },
+    {
+      "name": "poi_reputation",
+      "type": "double"
     }
   ],
   "connect.name": "poi"

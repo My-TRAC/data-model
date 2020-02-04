@@ -175,6 +175,10 @@
     {
       "name": "user_arrive_ontime",
       "type": "int"
+    },
+    {
+      "name": "user_reputation",
+      "type": "double"
     }
   ],
   "connect.name": "user"

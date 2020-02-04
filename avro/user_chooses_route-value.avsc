@@ -110,6 +110,13 @@
         "type" : "string",
         "cigo.mysql.datatype" : "JSON"
       }
+    },
+    {
+      "name": "prediction_reply",
+      "type": { 
+        "type" : "string",
+        "cigo.mysql.datatype" : "JSON"
+      }
     }
     ],
     "connect.name": "user_chooses_route"
