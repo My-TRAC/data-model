@@ -521,6 +521,7 @@ user_lifestyle enum can have the following values:
 | max_transfers | int | no | MyTrac-Companion |
 | user_choice | int | yes | MyTrac-Companion |
 | request_reply | json | yes | MyTrac-Companion |
+| prediction_reply | json | yes | MyTrac-Companion |
 
 choice_id is the unique identifier of this choice, which can be used to reference this choice from other items
 
