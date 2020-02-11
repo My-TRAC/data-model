@@ -56,8 +56,11 @@
     },
     {
       "name": "poi_reputation",
-      "type": "double",
-      "default": 0.0
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
     }
   ],
   "connect.name": "poi"

@@ -75,8 +75,11 @@
     },
     {
       "name": "activity_reputation",
-      "type": "double",
-      "default": 0.0
+      "type": [
+        "null",
+        "double"
+      ],
+      "default": null
     }
   ],
   "connect.name": "activity"
