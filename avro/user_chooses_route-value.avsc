@@ -114,7 +114,7 @@
     {
       "name": "prediction_reply",
       "type": { 
-        "type" : "string",
+        "type" : ["null","string"],
         "cigo.mysql.datatype" : "JSON"
       },
       "default": null
