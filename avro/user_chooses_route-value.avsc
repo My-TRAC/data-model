@@ -116,7 +116,8 @@
       "type": { 
         "type" : "string",
         "cigo.mysql.datatype" : "JSON"
-      }
+      },
+      "default": null
     }
     ],
     "connect.name": "user_chooses_route"
