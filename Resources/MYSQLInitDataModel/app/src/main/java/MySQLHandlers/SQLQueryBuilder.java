@@ -56,12 +56,14 @@ public class SQLQueryBuilder {
             query = query + " PRIMARY KEY";
         }
         
-        if(!isNullable) {
-            query = query + " NOT NULL";
-        }
-        else
-        {
-            query = query + " NULL";
+        if (!mysqlType.equals("JSON NULL")){
+            if(!isNullable) {
+                query = query + " NOT NULL";
+            }
+            else
+            {
+                query = query + " NULL";
+            }
         }
         
         if(!fieldSchema.isNullable() && mysqlType.contains("TIME"))
