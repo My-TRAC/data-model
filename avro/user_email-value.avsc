@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "user",
+  "name": "user_email",
   "fields": [
     {
       "name": "mytrac_id",
