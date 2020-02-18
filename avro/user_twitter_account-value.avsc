@@ -28,7 +28,11 @@
     },
     {
       "name": "twitter_account",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     }
   ],
   "connect.name": "user_twitter_account"

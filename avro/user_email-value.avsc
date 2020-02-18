@@ -28,7 +28,11 @@
     },
     {
       "name": "email",
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
     }
   ],
   "connect.name": "user_email"
