@@ -535,6 +535,17 @@ mode can have the following values:
 * 3: bike/moto
 
 
+### user_email
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | MyTrac-Companion  |
+| mytrac_is_valid | boolean | yes | MyTrac-Companion  |
+| mytrac_last_modified | timestamp | yes | MyTrac-Companion  |
+| user_id | string | yes | MyTrac-Companion |
+| email | string | yes | MyTrac-Companion |
+
+
 ### user_evaluates_activity
 
 | Field Name | Field Type | Required | Source |
@@ -603,6 +614,16 @@ happiness can have the following values:
 | is_rating_poi | boolean | yes | MyTrac-Companion |
 | is_signup | boolean | yes | MyTrac-Companion |
 | last_reward_done | timestamp | yes | MyTrac-Companion |
+
+### user_twitter_account
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | MyTrac-Companion  |
+| mytrac_is_valid | boolean | yes | MyTrac-Companion  |
+| mytrac_last_modified | timestamp | yes | MyTrac-Companion  |
+| user_id | string | yes | MyTrac-Companion |
+| twitter_account | string | yes | MyTrac-Companion |
 
 ### user_uses_app
 
