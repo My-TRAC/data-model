@@ -161,6 +161,33 @@ activity_type enum can have the following values:
 | trace_vert_acc | float | no | My-Trac Companion |
 
 
+### otp_reply
+
+| Field Name | Field Type | Required | Source |
+| ---------- | ---------- | -------- | ------ |
+| mytrac_id | long | yes | My-Trac Companion |
+| mytrac_is_valid | boolean | yes | My-Trac Companion |
+| mytrac_last_modified | timestamp | yes | My-Trac Companion |
+| choice_id | string | yes | My-Trac Companion |
+| request_reply | json | yes | MyTrac-Companion |
+| region | enum | yes | MyTrac-Companion |
+| model_api | enum | yes | MyTrac-Companion |
+| num_itineraries | int | yes | My-Trac Companion |
+
+region enum can have the following values:
+* 1: Dutch
+* 2: Hellenic
+* 3: Portuguese
+* 4: Spanish
+* 5: Other
+
+model_api enum can have the following values:
+* 1: Default
+* 2: Choice
+* 3: Departure
+* 4: Personalistation
+
+
 ### poi
 
 | Field Name | Field Type | Required | Source |
