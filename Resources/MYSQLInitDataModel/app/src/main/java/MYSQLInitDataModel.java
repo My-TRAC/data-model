@@ -69,7 +69,7 @@ public class MYSQLInitDataModel {
                 String[] subjects = mapper.readValue(line, String[].class);
                 
                 for (String schemaName : subjects) {
-                    URL subjectURL = new URL(schemaRegistryURL + "/subjects/" + schemaName + "/versions/latest");
+                    URL subjectURL = new URL(schemaRegistryURL + "/subjects/" + schemaName + "/versions/1");
                     BufferedReader reader2 = new BufferedReader(new InputStreamReader(subjectURL.openStream(), "UTF-8"));
                     for (String versionString; (versionString = reader2.readLine()) != null; ) {
                         Version version = mapper.readValue(versionString, Version.class);
