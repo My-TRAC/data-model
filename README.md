@@ -57,54 +57,54 @@ activity_type enum can have the following values:
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| agency_id | string | yes | operators platform/gtfs |
-| agency_name | string | yes | operators platform/gtfs |
-| agency_url | string | yes | operators platform/gtfs |
-| agency_timezone | string | yes | operators platform/gtfs |
-| agency_lang | string | no | operators platform/gtfs |
-| agency_phone | string | no | operators platform/gtfs |
-| agency_fare_url| string | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| agency_id | string | yes | operators portal/gtfs |
+| agency_name | string | yes | operators portal/gtfs |
+| agency_url | string | yes | operators portal/gtfs |
+| agency_timezone | string | yes | operators portal/gtfs |
+| agency_lang | string | no | operators portal/gtfs |
+| agency_phone | string | no | operators portal/gtfs |
+| agency_fare_url| string | no | operators portal/gtfs |
 
 ### calendar_date
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| service_id | string | yes | operators platform/gtfs |
-| date | date | yes | operators platform/gtfs |
-| exception_type| enum | yes | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| service_id | string | yes | operators portal/gtfs |
+| date | date | yes | operators portal/gtfs |
+| exception_type| enum | yes | operators portal/gtfs |
 
 ### calendar
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| service_id | string | yes | operators platform/gtfs |
-| monday | int | yes | operators platform/gtfs |
-| tuesday | int | yes | operators platform/gtfs |
-| wednesday | int | yes | operators platform/gtfs |
-| thursday | int | yes | operators platform/gtfs |
-| friday | int | yes | operators platform/gtfs |
-| saturday | int | yes | operators platform/gtfs |
-| sunday | int | yes | operators platform/gtfs |
-| start_date | date | yes | operators platform/gtfs |
-| end_date | date | yes | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| service_id | string | yes | operators portal/gtfs |
+| monday | int | yes | operators portal/gtfs |
+| tuesday | int | yes | operators portal/gtfs |
+| wednesday | int | yes | operators portal/gtfs |
+| thursday | int | yes | operators portal/gtfs |
+| friday | int | yes | operators portal/gtfs |
+| saturday | int | yes | operators portal/gtfs |
+| sunday | int | yes | operators portal/gtfs |
+| start_date | date | yes | operators portal/gtfs |
+| end_date | date | yes | operators portal/gtfs |
 
 
 ### facility
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
 | facility_id | string | yes | My-TRAC |
 | facility_name | string | yes | crawled |
 | facility_lat | double | yes | crawled |
@@ -115,30 +115,30 @@ activity_type enum can have the following values:
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| feed_published_name | string | yes | operators platform/gtfs |
-| feed_published_url | string | yes | operators platform/gtfs |
-| feed_lang | string | yes | operators platform/gtfs |
-| feed_start_date | date | no | operators platform/gtfs |
-| feed_end_date | date | no | operators platform/gtfs |
-| feed_version | string | no | operators platform/gtfs |
-| feed_contact_email | string | no | operators platform/gtfs |
-| feed_contact_url | string | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| feed_published_name | string | yes | operators portal/gtfs |
+| feed_published_url | string | yes | operators portal/gtfs |
+| feed_lang | string | yes | operators portal/gtfs |
+| feed_start_date | date | no | operators portal/gtfs |
+| feed_end_date | date | no | operators portal/gtfs |
+| feed_version | string | no | operators portal/gtfs |
+| feed_contact_email | string | no | operators portal/gtfs |
+| feed_contact_url | string | no | operators portal/gtfs |
 
 ### frequency
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| trip_id | string | yes | operators platform/gtfs |
-| start_time| time | yes | operators platform/gtfs |
-| end_time | time | yes | operators platform/gtfs |
-| headway_secs | int | yes | operators platform/gtfs |
-| exact_times | enum | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| trip_id | string | yes | operators portal/gtfs |
+| start_time| time | yes | operators portal/gtfs |
+| end_time | time | yes | operators portal/gtfs |
+| headway_secs | int | yes | operators portal/gtfs |
+| exact_times | enum | no | operators portal/gtfs |
 
 ### mobility_trace
 
@@ -244,20 +244,20 @@ poi_type enum can have the following values:
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| route_id | string | yes | operators platform/gtfs |
-| agency_id | string | yes | operators platform/gtfs |
-| route_short_name | string | conditional | operators platform/gtfs |
-| route_long_name | string | conditional | operators platform/gtfs |
-| route_desc | string | no | operators platform/gtfs |
-| route_type | enum | no | operators platform/gtfs |
-| route_type | enum | yes | operators platform/gtfs |
-| route_url | string | no | operators platform/gtfs |
-| route_color | string | no | operators platform/gtfs |
-| route_text_color | string | no | operators platform/gtfs |
-| route_sort_order | string | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| route_id | string | yes | operators portal/gtfs |
+| agency_id | string | yes | operators portal/gtfs |
+| route_short_name | string | conditional | operators portal/gtfs |
+| route_long_name | string | conditional | operators portal/gtfs |
+| route_desc | string | no | operators portal/gtfs |
+| route_type | enum | no | operators portal/gtfs |
+| route_type | enum | yes | operators portal/gtfs |
+| route_url | string | no | operators portal/gtfs |
+| route_color | string | no | operators portal/gtfs |
+| route_text_color | string | no | operators portal/gtfs |
+| route_sort_order | string | no | operators portal/gtfs |
 
 ### route_choice_model_output
 
@@ -313,84 +313,84 @@ poi_type enum can have the following values:
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| shape_id | string | yes | operators platform/gtfs |
-| shape_pt_lat | double | yes | operators platform/gtfs |
-| shape_pt_lon | double | yes | operators platform/gtfs |
-| shape_pt_sequence | int | yes | operators platform/gtfs |
-| shape_pt_sequence | int | yes | operators platform/gtfs |
-| shape_dist_traveled | float | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| shape_id | string | yes | operators portal/gtfs |
+| shape_pt_lat | double | yes | operators portal/gtfs |
+| shape_pt_lon | double | yes | operators portal/gtfs |
+| shape_pt_sequence | int | yes | operators portal/gtfs |
+| shape_pt_sequence | int | yes | operators portal/gtfs |
+| shape_dist_traveled | float | no | operators portal/gtfs |
 
 ### stop_time
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| trip_id | string | yes | operators platform/gtfs |
-| arrival_time | time | conditional | operators platform/gtfs |
-| departure_time | time | conditional | operators platform/gtfs |
-| stop_id | string | yes | operators platform/gtfs |
-| stop_sequence | int | yes | operators platform/gtfs |
-| stop_headsign | string | no | operators platform/gtfs |
-| pickup_type | enum | no | operators platform/gtfs |
-| drop_off_type | enum | no | operators platform/gtfs |
-| shape_dist_traveled | float | no | operators platform/gtfs |
-| time_point | enum | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| trip_id | string | yes | operators portal/gtfs |
+| arrival_time | time | conditional | operators portal/gtfs |
+| departure_time | time | conditional | operators portal/gtfs |
+| stop_id | string | yes | operators portal/gtfs |
+| stop_sequence | int | yes | operators portal/gtfs |
+| stop_headsign | string | no | operators portal/gtfs |
+| pickup_type | enum | no | operators portal/gtfs |
+| drop_off_type | enum | no | operators portal/gtfs |
+| shape_dist_traveled | float | no | operators portal/gtfs |
+| time_point | enum | no | operators portal/gtfs |
 
 ### stop
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| stop_id | string | yes | operators platform/gtfs |
-| stop_code | string | no | operators platform/gtfs |
-| stop_name | string | conditional | operators platform/gtfs |
-| stop_desc | string | no | operators platform/gtfs |
-| stop_lat | double | conditional | operators platform/gtfs |
-| stop_lon | double | conditional | operators platform/gtfs |
-| zone_id | string | conditional | operators platform/gtfs |
-| stop_url | string | no | operators platform/gtfs |
-| location_type | enum | no | operators platform/gtfs |
-| parent_station | string | conditional | operators platform/gtfs |
-| stop_timezone | string | no | operators platform/gtfs |
-| wheelchair_boarding | string | no | operators platform/gtfs |
-| level_id | string | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| stop_id | string | yes | operators portal/gtfs |
+| stop_code | string | no | operators portal/gtfs |
+| stop_name | string | conditional | operators portal/gtfs |
+| stop_desc | string | no | operators portal/gtfs |
+| stop_lat | double | conditional | operators portal/gtfs |
+| stop_lon | double | conditional | operators portal/gtfs |
+| zone_id | string | conditional | operators portal/gtfs |
+| stop_url | string | no | operators portal/gtfs |
+| location_type | enum | no | operators portal/gtfs |
+| parent_station | string | conditional | operators portal/gtfs |
+| stop_timezone | string | no | operators portal/gtfs |
+| wheelchair_boarding | string | no | operators portal/gtfs |
+| level_id | string | no | operators portal/gtfs |
 
 ### transfer
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| from_stop_id | string | yes | operators platform/gtfs |
-| to_stop_id | string | yes | operators platform/gtfs |
-| transfer_type | enum | yes | operators platform/gtfs |
-| min_transfer_time | int | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| from_stop_id | string | yes | operators portal/gtfs |
+| to_stop_id | string | yes | operators portal/gtfs |
+| transfer_type | enum | yes | operators portal/gtfs |
+| min_transfer_time | int | no | operators portal/gtfs |
 
 ### trip
 
 | Field Name | Field Type | Required | Source |
 | ---------- | ---------- | -------- | ------ |
-| mytrac_id | long | yes | operators platform |
-| mytrac_is_valid | boolean | yes | operators platform |
-| mytrac_last_modified | timestamp | yes | operators platform |
-| route_id | string | yes | operators platform/gtfs |
-| service_id | string | yes | operators platform/gtfs |
-| trip_id | string | yes | operators platform/gtfs |
-| trip_headsign | string | no | operators platform/gtfs |
-| trip_short_name | string | no | operators platform/gtfs |
-| direction_id | int | no | operators platform/gtfs |
-| block_id | int | no | operators platform/gtfs |
-| shape_id | string | no | operators platform/gtfs |
-| wheelchair_accessible | int | no | operators platform/gtfs |
-| bikes_allowed | int | no | operators platform/gtfs |
+| mytrac_id | long | yes | operators portal |
+| mytrac_is_valid | boolean | yes | operators portal |
+| mytrac_last_modified | timestamp | yes | operators portal |
+| route_id | string | yes | operators portal/gtfs |
+| service_id | string | yes | operators portal/gtfs |
+| trip_id | string | yes | operators portal/gtfs |
+| trip_headsign | string | no | operators portal/gtfs |
+| trip_short_name | string | no | operators portal/gtfs |
+| direction_id | int | no | operators portal/gtfs |
+| block_id | int | no | operators portal/gtfs |
+| shape_id | string | no | operators portal/gtfs |
+| wheelchair_accessible | int | no | operators portal/gtfs |
+| bikes_allowed | int | no | operators portal/gtfs |
 
 ### user
 
